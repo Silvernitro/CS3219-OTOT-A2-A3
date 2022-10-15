@@ -16,10 +16,4 @@ kubectl get svc
 
 echo "========Create ingress controller=========\n"
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
-kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=120s
-echo "========Check nodes are ingress ready=========\n"
-kubectl get nodes -L ingress-ready
-echo "========Create ingress=========\n"
-kubectl apply -f ./k8s/manifests/backend-ingress.yaml
-echo "========Verify ingress=========\n"
-kubectl describe ingress
+
