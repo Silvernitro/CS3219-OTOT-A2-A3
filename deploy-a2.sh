@@ -17,3 +17,5 @@ kubectl get svc
 echo "========Create ingress controller=========\n"
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 
+# The rest of the deployment is done manually as we have to wait for the ingress controller to be ready. I tried kubectl's wait command
+# but it is experimental and I've found that it doesn't always work.

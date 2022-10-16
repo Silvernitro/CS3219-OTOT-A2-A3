@@ -20,11 +20,11 @@ nodes:
         kind: JoinConfiguration
         nodeRegistration:
           kubeletExtraArgs:
-            node-labels: "topology.kubernetes.io/zone=b"
+            node-labels: "topology.kubernetes.io/zone=a"
   - role: worker
     kubeadmConfigPatches:
       - |
         kind: JoinConfiguration
         nodeRegistration:
           kubeletExtraArgs:
-            node-labels: "topology.kubernetes.io/zone=c"
+            node-labels: "topology.kubernetes.io/zone=b"
